@@ -43,19 +43,19 @@ document.onkeyup = function(event) {
         }
 
 // Logic tree that will update the webpage after each input
-        
+
     if(event.key !== answer && guesses > 0) {
             document.querySelector('#left').innerHTML = guesses;
         }
     else if(guesses === 0 && event.key !== answer) {
-            alert("You lose!");
+            alert("You must not be psychic... you lose!");
             losses++;
             reset();
             document.querySelector('#loss').innerHTML = losses;
             document.querySelector('#left').innerHTML = guesses;
         }
     else {
-            alert("You win!");
+            alert("You must be psychic... you win!");
             wins++;
             reset();
             document.querySelector('#win').innerHTML = wins;
